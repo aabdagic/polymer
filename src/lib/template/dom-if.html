@@ -99,6 +99,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     render: function() {
       this._flushTemplates();
     },
+    
+    forceRestamp: function() {
+      this._teardownInstance();
+      this._ensureInstance();
+    },
 
     _render: function() {
       if (this.if) {
